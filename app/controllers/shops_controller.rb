@@ -1,51 +1,55 @@
 class ShopsController < ApplicationController
-  before_action :set_shop, only: %i[ show update destroy ]
 
   # GET /shops
   def index
-    @shops = Shop.all
-
-    render json: @shops
+    shop = Shop.all
+    render json: shop
   end
 
   # GET /shops/1
   def show
-    render json: @shop
+    shop = set_shop
+    render json: shop
   end
 
   # POST /shops
   def create
-    @shop = Shop.new(shop_params)
-
-    if @shop.save
-      render json: @shop, status: :created, location: @shop
+    shop = Shop.create!(shop_params)
+    if shop
+      render json: shop, status: :created
     else
-      render json: @shop.errors, status: :unprocessable_entity
+      render json: shop.errors, status: :unprocessable_entity
     end
   end
 
   # PATCH/PUT /shops/1
   def update
-    if @shop.update(shop_params)
-      render json: @shop
+    if shop.update!(shop_params)
+      render json: shop
     else
-      render json: @shop.errors, status: :unprocessable_entity
+      render json: {errors: 'shop not found'}, status: :unprocessable_entity
     end
   end
 
   # DELETE /shops/1
   def destroy
-    @shop.destroy
+    shop = set_shop
+    if shop
+      shop.destroy
+      head :no_content
+    else 
+      render json: {errors: 'shop not found'}, status: :unprocessable_entity
+    end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_shop
-      @shop = Shop.find(params[:id])
+      shop = Shop.find_by(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def shop_params
-      params.require(:shop).permit(:name, :seller_id, :description)
+      params.permit(:name, :seller_id, :description)
     end
 end

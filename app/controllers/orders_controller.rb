@@ -1,51 +1,55 @@
 class OrdersController < ApplicationController
-  before_action :set_order, only: %i[ show update destroy ]
 
   # GET /orders
   def index
-    @orders = Order.all
-
-    render json: @orders
+    order = Order.all
+    render json: order
   end
 
   # GET /orders/1
   def show
-    render json: @order
+    order = set_order
+    render json: order
   end
 
   # POST /orders
   def create
-    @order = Order.new(order_params)
-
-    if @order.save
-      render json: @order, status: :created, location: @order
+    order = Order.create!(order_params)
+    if order
+      render json: order, status: :created
     else
-      render json: @order.errors, status: :unprocessable_entity
+      render json: order.errors, status: :unprocessable_entity
     end
   end
 
   # PATCH/PUT /orders/1
   def update
-    if @order.update(order_params)
-      render json: @order
+    if order.update!(order_params)
+      render json: order
     else
-      render json: @order.errors, status: :unprocessable_entity
+      render json: {errors: 'order not found'}, status: :unprocessable_entity
     end
   end
 
   # DELETE /orders/1
   def destroy
-    @order.destroy
+    order = set_order
+    if order
+      order.destroy
+      head :no_content
+    else
+      render json: {errors: 'order not found'}, status: :unprocessable_entity
+    end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_order
-      @order = Order.find(params[:id])
+      order = Order.find_by(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def order_params
-      params.require(:order).permit(:customer_id, :quantity, :total_price, :status, :payment_method, :shipping_adress, :date)
+      params.permit(:customer_id, :quantity, :total_price, :status, :payment_method, :shipping_adress, :date)
     end
 end
