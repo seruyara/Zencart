@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_26_092629) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_27_122357) do
   create_table "cart_items", force: :cascade do |t|
     t.integer "cart_id"
     t.integer "product_id"
@@ -24,6 +24,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_26_092629) do
     t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
   end
 
   create_table "customers", force: :cascade do |t|
@@ -56,6 +62,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_26_092629) do
     t.string "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "tags", default: "{}"
   end
 
   create_table "sellers", force: :cascade do |t|
@@ -75,4 +82,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_26_092629) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "variations", force: :cascade do |t|
+    t.string "name"
+    t.string "value"
+    t.integer "product_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_variations_on_product_id"
+  end
+
+  add_foreign_key "variations", "products"
 end
