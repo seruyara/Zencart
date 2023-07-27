@@ -1,5 +1,8 @@
 class CustomersController < ApplicationController
 
+  skip_before_action :authenticateuser, only: [:create]
+  before_action :find_user, only: [:show, :update, :destroy]
+
   # GET /customers
   def index
     customer = Customer.all
@@ -17,7 +20,8 @@ class CustomersController < ApplicationController
     customer = Customer.create!(customer_params)
     if customer
       render json: customer, status: :created
-    else render json: {error: 'customer not found'}, status: :unprocessable_entity
+    else 
+      render json: {error: 'customer not found'}, status: :unprocessable_entity
     end
   end
 
