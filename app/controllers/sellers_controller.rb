@@ -1,5 +1,8 @@
 class SellersController < ApplicationController
 
+  skip_before_action :authenticateuser, only: [:create]
+  before_action :find_user, only: [:show, :update, :destroy]
+
   # GET /sellers
   def index
     seller = Seller.all
