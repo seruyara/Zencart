@@ -11,92 +11,92 @@ end
 #Seller
 seller_data = [
   {
-    name: "John Doe",
-    email: "john.doe@example.com",
+    name: "John Mwangi",
+    email: "john.mwangi@gmail.com",
     password: "jdsecretpass",
     shop_name: "Tech Gadgets Store"
   },
   {
     name: "Alice Smith",
-    email: "alice.smith@example.com",
+    email: "alice.smith@gmail.com",
     password: "aspsecretpass",
     shop_name: "Mac & More"
   },
   {
     name: "Robert Johnson",
-    email: "robert.johnson@example.com",
+    email: "robert.johnson@yahoo.com",
     password: "rjsecretpass",
     shop_name: "Beauty zone"
   },
   {
     name: "Emily Davis",
-    email: "emily.davis@example.com",
+    email: "emily.davis@gmail.com",
     password: "edsecretpass",
     shop_name: "Beauty & Health Haven"
   },
   {
     name: "Michael Lee",
-    email: "michael.lee@example.com",
+    email: "michael.lee@yahoo.com",
     password: "mlsecretpass",
     shop_name: "Electronics Hub"
   },
   {
     name: "Sarah Johnson",
-    email: "sarah.johnson@example.com",
+    email: "sarah.johnson@gmail.com",
     password: "sjsecretpass",
     shop_name: "Hair & Body Essentials"
   },
   {
     name: "David Wilson",
-    email: "david.wilson@example.com",
+    email: "david.wilson@gmail.com",
     password: "dwsecretpass",
     shop_name: "Pet Paradise"
   },
   {
     name: "Jennifer Brown",
-    email: "jennifer.brown@example.com",
+    email: "jennifer.brown@gmail.com",
     password: "jbsecretpass",
     shop_name: "Outdoor Decor & More"
   },
   {
     name: "William Turner",
-    email: "william.turner@example.com",
+    email: "william.turner@gmail.com",
     password: "wtsecretpass",
     shop_name: "Home & Office Supplies"
   },
   {
     name: "Linda Martinez",
-    email: "linda.martinez@example.com",
+    email: "linda.martinez@gmail.com",
     password: "lmsecretpass",
     shop_name: "Office Haven"
   },
   {
     name: "Daniel Anderson",
-    email: "daniel.anderson@example.com",
+    email: "daniel.anderson@gmail.com",
     password: "dasecretpass",
     shop_name: "Toys & More "
   },
   {
     name: "Karen Scott",
-    email: "karen.scott@example.com",
+    email: "karen.scott@gmail.com",
     password: "kssecretpass",
     shop_name: "Kids Paradise Clothes"
   },
   {
     name: "Richard Baker",
-    email: "richard.baker@example.com",
+    email: "richard.baker@gmail.com",
     password: "rbsecretpass",
     shop_name: "Men's Fashion"
   },
   {
     name: "Susan Edwards",
-    email: "susan.edwards@example.com",
+    email: "susan.edwards@gmail.com",
     password: "sesecretpass",
     shop_name: "Fashion Fusion Unisex Store"
   },
   {
     name: "Christopher Young",
-    email: "christopher.young@example.com",
+    email: "christopher.young@gmail.com",
     password: "cysecretpass",
     shop_name: "Women's Fashion Boutique"
   }
@@ -983,10 +983,11 @@ end
 },
 ]
 
+  
 product_data.each do |product_attrs|
     images = product_attrs.delete(:images)
     tags = product_attrs.delete(:tags)
-    variations_data = product_attrs.delete(:variations) # Renamed from `variations` to `variations_data`
+    variations_data = product_attrs.delete(:variations) 
     category_name = product_attrs.delete(:category)
     product = Product.create!(product_attrs)
   
@@ -1052,3 +1053,5 @@ end
 
 
 
+
+  puts "Seeded successfully."
