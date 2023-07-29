@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   resources :orders, only: [:show, :index, :update, :destroy]
   resources :products, only: [:show, :index, :update, :destroy]
   resources :shops, only: [:show, :index, :update, :destroy]
-  resources :customers, only: [:show, :index, :update, :destroy]
-  resources :sellers, only: [:show, :index, :update, :destroy]
+  resources :customers, only: [:index, :update, :destroy]
+  resources :sellers, only: [:index, :update, :destroy]
   resources :categories, only: [:show, :index, :update, :destroy]
   resources :variations, only: [:show, :index, :update, :destroy]
 
