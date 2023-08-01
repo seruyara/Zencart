@@ -83,8 +83,15 @@ class ProductsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
-      product = Product.find_by(params[:id])
+      product = Product.find_by(id: params[:id])
+      if product.nil?
+        # Handle case where the product with the given id is not found
+        render json: { error: 'Product not found' }, status: :not_found
+      else
+        product
+      end
     end
+    
 
     # Only allow a list of trusted parameters through.
     def product_params
