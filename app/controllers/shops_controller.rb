@@ -9,6 +9,7 @@ class ShopsController < ApplicationController
   # GET /shops/1
   def show
     shop = set_shop
+    if shop
     render json: shop
   end
 
