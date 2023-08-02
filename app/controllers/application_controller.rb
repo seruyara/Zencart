@@ -9,7 +9,6 @@ class ApplicationController < ActionController::API
   
     def authenticate_customer
       header = request.headers['Authorization']
-  
       if header && header.start_with?('Bearer ')
         token = header.split(' ').last
   
@@ -26,4 +25,3 @@ class ApplicationController < ActionController::API
       end
     end
   end
-  
