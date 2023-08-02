@@ -1,17 +1,22 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: %i[ show update destroy ]
+  before_action :set_product, only: %i[show update destroy]
+
+  # ...
 
   # GET /products
   def index
     @products = Product.all
-
     render json: @products
   end
+
+  # ...
 
   # GET /products/1
   def show
     render json: @product
   end
+
+  # ...
 
   # POST /products
   def create
@@ -24,6 +29,8 @@ class ProductsController < ApplicationController
     end
   end
 
+  # ...
+
   # PATCH/PUT /products/1
   def update
     if @product.update(product_params)
@@ -33,9 +40,22 @@ class ProductsController < ApplicationController
     end
   end
 
+  # ...
+
   # DELETE /products/1
   def destroy
     @product.destroy
+  end
+
+  # New action to handle search functionality
+  def search
+    # Get the search query from the params
+    search_query = params[:query]
+
+    # Perform the search based on the 'name' attribute (modify as needed)
+    @products = Product.where('name LIKE ?', "%#{search_query}%")
+
+    render json: @products
   end
 
   private
