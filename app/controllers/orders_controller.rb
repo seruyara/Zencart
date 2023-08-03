@@ -45,7 +45,7 @@ class OrdersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_order
-      order = Order.find_by(params[:id])
+      order = Order.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

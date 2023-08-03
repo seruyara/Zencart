@@ -92,7 +92,7 @@ class ProductsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
-      Product.find(params[:id])
+     product = Product.find(params[:id])
     rescue ActiveRecord::RecordNotFound
       render json: { error: "Product not found" }, status: :not_found
     end
