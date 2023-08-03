@@ -1,48 +1,56 @@
 class CustomersController < ApplicationController
+  before_action :authorize, only: [:show]
+  before_action :set_customer, only: [:show, :update, :destroy]
 
-  skip_before_action :authenticate_customer, only: [:create]
-  before_action :find_customer, only: [:show, :update, :destroy]
-
-  # GET /customers
-  def index
-    @customers = Customer.all
-    render json: @customers
-  end
-
-  # GET /customers/1
-  def show
-    render json: @customer
-  end
-
-  # POST /customers
   def create
-    @customer = Customer.create(customer_params)
-    if @customer.save
-      render json: @customer
+    customer = Customer.create(customer_params)
+    #debugger
+    if customer.valid?
+      token = customer.generate_authentication_token!
+      # debugger
+      render json: {'data':customer, 'token':token}, status: :created
     else
-      render json: { errors: @customer.errors.full_messages }, status: 422
+      render json: { error: customer.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
-  # PATCH/PUT /customers/1
-  def update
-    unless @customer.update(customer_params)
-      render json: { errors: @customer.errors.full_messages }, status: 422
+  def show
+
+    customer = Customer.find_by(authentication_token: request.headers['Authorization'])
+
+    if customer
+      render json: customer
+    else
+      render json: { error: 'Invalid authentication token' }, status: :unauthorized
     end
   end
 
-  # DELETE /customers/1
+  def index
+    customers = Customer.all
+    render json: customers
+  end
+
   def destroy
-    @customer.destroy
+    if customer.destroy
+      head :no_content
+    else
+      render json: { error: "Failed to delete customer" }, status: :unprocessable_entity
+    end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def customer_params
-      params.require(:customer).permit(:name, :email, :password)
-    end
-    # Only allow a list of trusted parameters through.
-    def find_customer
-      @customer = Customer.find(params[:id])
-    end
+
+  def set_customer
+    customer = Customer.find(params[:id])
+  rescue ActiveRecord::RecordNotFound
+    render json: { error: "Customer not found" }, status: :not_found
+  end
+
+  def customer_params
+    params.require(:customer).permit(:name, :email, :password, :password_confirmation )
+  end
+
+  def authorize
+    return render json: { error: 'Unauthorized' }, status: :unauthorized unless request.headers['Authorization']
+  end
 end
