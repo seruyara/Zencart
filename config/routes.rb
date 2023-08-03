@@ -3,10 +3,11 @@ Rails.application.routes.draw do
   resources :carts, only: [:show, :index, :update, :destroy]
   resources :orders, only: [:show, :index, :update, :destroy]
   resources :products, only: [:show, :index, :update, :destroy]
+  get '/products/:id', to: 'products#show_by_id', as: 'product_by_id'
   resources :shops, only: [:show, :index, :update, :destroy]
   resources :customers, only: [:show, :index, :create, :update, :destroy]
   resources :sellers, only: [:show, :index, :create,  :update, :destroy]
-  post 'login', to: 'sessions#create'
+  post '/login/customers', to: 'sessions#create'
   post 'signup', to: 'customers#create'
   delete '/logout', to: 'sessions#destroy'
   get '/customers', to: 'customers#index'
