@@ -101,6 +101,7 @@ GEM
     jaro_winkler (1.5.6)
     json (2.6.3)
     jsonapi-renderer (0.2.2)
+    jwt (2.7.1)
     kramdown (2.4.0)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -139,6 +140,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.7.1)
     rack (2.2.7)
+    rack-cors (2.0.1)
+      rack (>= 2.0.0)
     rack-test (2.1.0)
       rack (>= 1.3)
     rails (7.0.6)
@@ -231,7 +234,9 @@ DEPENDENCIES
   bootsnap
   debug
   faker
+  jwt
   puma (~> 5.0)
+  rack-cors
   rails (~> 7.0.6)
   solargraph
   sqlite3 (~> 1.4)
