@@ -9,7 +9,6 @@ class ShopsController < ApplicationController
   # GET /shops/1
   def show
     shop = set_shop
-    if shop
     render json: shop
   end
 
@@ -46,7 +45,7 @@ class ShopsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_shop
-      shop = Shop.find_by(params[:id])
+      shop = Shop.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

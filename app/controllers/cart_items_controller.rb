@@ -42,6 +42,8 @@ class CartItemsController < ApplicationController
 
   def set_cart_item
       cart_item = CartItem.find_by(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      render json: { error: "cart_item not found" }, status: :not_found
     end
 
     def cart_item_params
