@@ -14,6 +14,8 @@ gem "puma", "~> 5.0"
 gem "faker"
 gem "solargraph"
 gem 'active_model_serializers'
+gem 'jwt'
+gem 'rack-cors', require: 'rack/cors'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 
