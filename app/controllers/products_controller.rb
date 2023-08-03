@@ -12,6 +12,15 @@ class ProductsController < ApplicationController
     render json: product
   end
 
+
+  # GET /products/:id
+  def show_by_id
+    product = Product.find(params[:id])
+    render json: product
+  rescue ActiveRecord::RecordNotFound
+    render json: { error: "Product not found" }, status: :not_found
+  end
+
   # POST /products
   def create
     product = Product.create!(product_params)
@@ -83,7 +92,9 @@ class ProductsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
-      product = Product.find_by(params[:id])
+      Product.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      render json: { error: "Product not found" }, status: :not_found
     end
 
     # Only allow a list of trusted parameters through.
