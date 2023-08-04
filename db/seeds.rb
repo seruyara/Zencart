@@ -209,21 +209,7 @@ end
       #PRODUCT
   product_data = [
 
-    {
-        name: 'Puffer Phone case',
-        shop_id: 1,
-        description: 'Our everyday, flexible essential - Water-resistant with raised edges for added screen and camera protection.',
-        price: 2000,
-        image: ['https://i.pinimg.com/564x/e6/ce/c0/e6cec0d8c628487bd8bb4758e45e81ee.jpg',
-                'https://i.pinimg.com/564x/91/b1/8b/91b18bd8bc1b29a32b5b707c1d2d5271.jpg',
-                'https://i.pinimg.com/474x/89/33/4a/89334a05b816d0f9eeeedad1c839b657.jpg'],
-        quantity: 25,
-        category: 'Electronics & Accessories', 
-        tags: ['phone', 'case'],
-        variations: [
-          { name: 'Color', value: ['Black', 'Green', 'Pink'] }
-        ]
-      },
+ 
       {
         name: 'Charger Cable Protector Cord ',
         shop_id: 1,
@@ -238,36 +224,6 @@ end
         ]
       },
       {
-        name: 'Silicone Case',
-        shop_id: 1,
-        description: 'Display size: 6.1 inches.A soft microfiber lining on the inside helps protect your iPhone.',
-        price: 1500,
-        image: ['https://i.pinimg.com/564x/d1/71/65/d171658e12621727cafb88eaf99358f7.jpg',
-        'https://i.pinimg.com/474x/84/c2/df/84c2dfce662bc24513ef49f81344150b.jpg',
-        'https://i.pinimg.com/474x/2d/5b/9b/2d5b9b853c8408d42747147e562f5f5d.jpg'],
-        quantity: 27,
-        category: 'Electronics & Accessories', 
-        tags: ['phone', 'case'],
-        variations: [
-          { name: 'Color', value: ['White', 'Dark Blue', 'Green'] }
-        ]
-      },
-      {
-        name: 'Puffy Laptop Pouch',
-        shop_id: 2,
-        description: '16-inch. The ultimate accessory to keep your laptop safe and stylishly snug. Crafted with a cushioned and padded interior, this pouch offers superior protection against bumps, scratches, and dust.',
-        price: 3000,
-        image: ['https://i.pinimg.com/474x/76/81/bc/7681bcaab1449bf6970bd01df3eadaa9.jpg',
-        'https://i.pinimg.com/474x/8d/7c/a2/8d7ca22b1cbce6f9440b4d357418371d.jpg'],
-        quantity: 40,
-        category: 'Electronics & Accessories', 
-        tags: ['laptop', 'laptop sleeve'],
-        variations: [
-          { name: 'Color', value: ['Yellow', 'Purple'] }
-        ]
-      },
-      
-      {
         name: 'AirPods Pro',
         shop_id: 2,
         description: '2nd Generation',
@@ -278,49 +234,6 @@ end
         tags: ['airpods', 'apple'],
         variations: [
           { name: 'Color', value: 'White' }
-        ]
-      },
-      {
-        name: 'Headphones',
-        shop_id: 2,
-        description: 'Collar ABS Plain Gaming-Headsets Embellished Audio & Video',
-        price: 4000,
-        image: ['https://i.pinimg.com/564x/f7/fd/32/f7fd32edc6574e7c2f1fa5093f746b3c.jpg',
-        'https://i.pinimg.com/474x/79/90/90/7990908e7ae6f42a30468e9ad919fe70.jpg',
-        'https://i.pinimg.com/474x/43/6d/e9/436de9a374ed6f7477bc410455691ed2.jpg'],
-        quantity: 34,
-        category: 'Electronics & Accessories', 
-        tags: ['phone', 'headphone'],
-        variations: [
-          { name: 'Color', value: ['Cream', 'White','Green'  ]}
-        ]
-      },
-      {
-        name: 'JBL Tune 510',
-        shop_id: 3,
-        description: 'Wireless Headphones',
-        price: 2000,
-        image:[ 'https://i.pinimg.com/474x/3f/dd/91/3fdd91cb31bdfac7027d72459f5170ff.jpg',
-        'https://i.pinimg.com/474x/44/71/cb/4471cb458d458d04fdbef3eb4da0d7c9.jpg'],
-        quantity: 43,
-        category: 'Electronics & Accessories', 
-        tags: ['phone', 'headphone'],
-        variations: [
-          { name: 'Color', value: ['Rose Gold', 'Black'] }
-        ]
-      },
-      {
-        name: 'Mini speaker',
-        shop_id: 3,
-        description: 'Bluetooth portable speaker',
-        price: 3000,
-        image: ['https://i.pinimg.com/564x/eb/91/6a/eb916a85407180161df9663a6241c75d.jpg',
-        'https://i.pinimg.com/474x/00/92/74/009274a8f5c887da58dc858b03532a93.jpg'],
-        quantity: 26,
-        category: 'Electronics & Accessories', 
-        tags: ['speaker', 'wireless'],
-        variations: [
-          { name: 'Color', value: ['Pink', 'Purple'] }
         ]
       },
       {
@@ -336,21 +249,6 @@ end
           { name: 'Size', value: 'Standard' }
         ]
       },
-      {
-        name: 'Portable Laptop Stand',
-        shop_id: 1,
-        description: ' Adjustable, Foldable Laptop Stand ',
-        price: 700,
-        image: ['https://i.pinimg.com/474x/fe/c1/03/fec10347e7a355ff2ce67b15121eb974.jpg',
-        'https://i.pinimg.com/474x/14/30/33/1430339096f8670c4b15eba0bd67c0b2.jpg'],
-        quantity: 17,
-        category: 'Electronics & Accessories', 
-        tags: ['phone', 'case'],
-        variations: [
-          { name: 'Size', value: 'Standard' }
-        ]
-      },
-
    # Beauty, Health & Hair
    {
     name: 'Short Bob Wig',
@@ -655,35 +553,6 @@ end
     { name: 'Color', value: ['Blue', 'Pink', 'White', 'Purple'] }
   ]
 },
-{
-  name: 'Desktop Pad',
-  shop_id: 10,
-  description: 'Protects your desk or table, shielding the surface from scratches and damage caused by daily use.',
-  price: 600,
-  image: ['https://i.pinimg.com/564x/87/11/4b/87114b21ab7eccb01eff76b6441491f6.jpg',  
-'https://i.pinimg.com/474x/44/3e/7c/443e7c4b69b39cc88489acd36c28d89c.jpg'],
-quantity: 81,
-  category: 'Home & Office', 
-  tags: ['office', 'decor', 'home'],
-  variations: [
-    { name: 'Color', value: 'Cream' }
-  ]
-},
-{
-  name: 'Wireless Mouse',
-  shop_id: 10,
-  description: 'Make any space minimalist, modern, and silent with Logitech Pebble the portable mouse that fits your curated lifestyle and goes wherever life takes you. The smooth organic shape fits in your pocket, bag, and feels great in your hand.',
-  price: 1950,
-  image: ['https://i.pinimg.com/474x/67/87/86/678786603c7566869147fa3dbf5bcf85.jpg',
-'https://i.pinimg.com/474x/cd/93/ca/cd93ca558f2ccd53b4fee1647679f054.jpg',
-'https://i.pinimg.com/564x/c5/db/f2/c5dbf299fb6fbc9a623a6bd9bc3b2a17.jpg'],
-  quantity: 51,
-  category: 'Home & Office', 
-  tags: ['office', 'stationary', 'mouse'],
-  variations: [
-    { name: 'Color', value: ['Green', 'Pink', 'White'] }
-  ]
-},
 #Kids & Toys
 {
   name: 'Kniiter Sweater',
@@ -847,38 +716,6 @@ quantity: 81,
   ]
 },
 {
-  name: 'Eventura Shirt',
-  shop_id: 14,
-  description: "When summer bliss and laid-back spirit meet, a shirt like this emerges. Crafted from 100% cotton for excellent style and endless combination possibilities.",
-  price: 2400,
-  image: ['https://i.pinimg.com/564x/a9/7f/62/a97f6234877f53762645378b38ace30e.jpg',
-  'https://i.pinimg.com/474x/8f/a4/03/8fa40302334321eec16941730fa2576a.jpg'],
-  quantity: 25,
-  category: "Men's Fashion", 
-  tags: ['men', 'shirts', 'style'],
-  variations: [
-    { name: 'Size', value:[ 'S','M','L','XL'] },
-    { name: 'Color', value: ['Cream', 'Green'] }
-  ]
-},
-{
-  name: 'Corduroy Short Sleeve  Shirt',
-  shop_id: 14,
-  description: "Mens Contrast Color Corduroy Short Sleeve Loungewear",
-  price: 1500,
-  image: [
-    "https://i.pinimg.com/564x/9a/94/e3/9a94e34a4a2f00489db0b64d439b7c8a.jpg",
-    "https://i.pinimg.com/474x/5b/a6/a6/5ba6a696ed2d6075d737800606302dcf.jpg"
-],
-  quantity: 54,
-  category: "Men's Fashion", 
-  tags: ['men', 'shirts', 'style'],
-  variations: [
-    { name: 'Size', value:[ 'S','M','L','XL'] },
-    { name: 'Color', value: ['Brown', 'Blue'] }
-  ]
-},
-{
   name: 'Sweatpants',
   shop_id: 14,
   description: "Stay comfortable and casual with these Solid Color Sweatpants.",
@@ -906,21 +743,6 @@ quantity: 81,
   variations: [
     { name: 'Size', values: ['S', 'M', 'L', 'XL', 'XXL'] },
     { name: 'Color', values: ['Yellow'] }
-  ]
-},
-
-{
-  name: 'Scarlet Dress',
-  shop_id: 14,
-  description: "Scarlet darkness summer dress square neck sleeveless high low fairy dress steampunk dress.", 
-  price: 1900,
-  image: ['https://i.pinimg.com/564x/f0/78/23/f07823b5424cf634d390940b047a9b4c.jpg', 'https://i.pinimg.com/474x/52/ba/f2/52baf27319958869707972aaad57c40b.jpg'], 
-  quantity: 43,
-  category: "Women's Fashion", 
-  tags: ['women', 'dress', 'summer'],
-  variations: [
-    { name: 'Size', values: ['S', 'M', 'L', 'XL', 'XXL'] },
-    { name: 'Color', values: ['Green', 'Purple'] } 
   ]
 },
 
@@ -965,61 +787,42 @@ quantity: 81,
     { name: 'Size', value: [ 5, 6, 7, 8, 9]},
     { name: 'Color', value: 'Chestnunt' }
   ]
-},
-{
-  name: 'Two-Piece Sweater Suit',
-  shop_id: 15,
-  description: "Two-piece casual hooded sweater suit. 100% high-quality craftsmanship ✨Selected high-quality fabrics.",
-  price: 1300,
-  image: ['https://i.pinimg.com/564x/b7/99/d4/b799d4fd7acacda5f74b192c9087f821.jpg',
-  'https://i.pinimg.com/474x/5a/17/b2/5a17b24d5f2ba30896f31712c36f6566.jpg'],
-  quantity: 5,
-  category: "Women's Fashion", 
-  tags: ['women', 'boots', 'ugg'],
-  variations: [
-    { name: 'Size', value: [ 'S','M','L','XL', 'XXL']},
-    { name: 'Color', value: ['Black','Light Brown'] }
-  ]
-},
+}
 ]
 
   
 product_data.each do |product_attrs|
-    images = product_attrs.delete(:images)
-    tags = product_attrs.delete(:tags)
-    variations_data = product_attrs.delete(:variations) 
-    category_name = product_attrs.delete(:category)
-    product = Product.create!(product_attrs)
-  
-    # Associate the product with the specified category (tag) if it exists
-    if category_name
-      category = Category.find_or_create_by(name: category_name)
-      product.categories << category
-    end
-  
-    # Set the tags attribute for the product
-    product.update(tags: tags)
-  
-    # Create multiple photos for the product using the images array
-    if images.present?
-      images.each do |image_url|
-        product.photos.create!(image_url: image_url)
-      end
-    else
-      puts "No images found to create photos."
-    end
-  
-    # Create variations for the product
-    if variations_data.present?
-      variations_data.each do |variation_attrs|
-        values = variation_attrs.delete(:values) # Extract the values from the variation_attrs
-        variation = product.variations.create!(variation_attrs)
-        variation.update(values: values) # Assign the values to the variation
-      end
+  images = product_attrs.delete(:images)
+  tags = product_attrs.delete(:tags)
+  variations_data = product_attrs.delete(:variations)
+  category_name = product_attrs.delete(:category)
+  product = Product.create!(product_attrs)
+
+  # Associate the product with the specified category (tag) if it exists
+  if category_name
+    category = Category.find_or_create_by(name: category_name)
+    product.categories << category
+  end
+
+  # Set the tags attribute for the product
+  product.update(tags: tags)
+
+  # Create variations for the product
+  if variations_data.present?
+    variations_data.each do |variation_attrs|
+      values = variation_attrs.delete(:values) # Extract the values from the variation_attrs
+      variation = product.variations.create!(variation_attrs)
+      variation.update(values: values) # Assign the values to the variation
     end
   end
-  
-  
+
+  # Create the product's image
+  if images.present?
+    # Assuming you have an attribute `image` for the `Product` model to store the image
+    product.image.attach(io: URI.open(images), filename: 'product_image.jpg', content_type: 'image/jpeg')
+  end
+end
+
 
 #Cart
 15.times do
