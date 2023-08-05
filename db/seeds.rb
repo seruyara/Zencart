@@ -210,19 +210,7 @@ end
   product_data = [
 
  
-      {
-        name: 'Charger Cable Protector Cord ',
-        shop_id: 1,
-        description: 'Protective Charging Charger Cable Protector Cord Saver for Universal',
-        price: 500,
-        image: 'https://i.pinimg.com/564x/98/a4/ba/98a4ba922d38242257c9f12d21efc6c9.jpg',
-        quantity: 30,
-        category: 'Electronics & Accessories', 
-        tags: ['phone', 'charger', 'cable protector'],
-        variations: [
-          { name: 'Color', value: ['Purple', 'Pink', 'Yellow', 'Green', 'Blue', 'Orange'] }
-        ]
-      },
+    
       {
         name: 'AirPods Pro',
         shop_id: 2,
@@ -230,7 +218,7 @@ end
         price: 2500,
         image: 'https://i.pinimg.com/474x/ab/68/1d/ab681de3be239553cd7ea3d411b57f82.jpg',
         quantity: 32,
-        category: 'Electronics & Accessories', 
+        category: 7, 
         tags: ['airpods', 'apple'],
         variations: [
           { name: 'Color', value: 'White' }
@@ -397,6 +385,19 @@ end
     ]
   },
   {
+    name: 'Cable Protector ',
+    shop_id: 1,
+    description: 'Protective Charging Charger Cable Protector Cord Saver for Universal',
+    price: 500,
+    image: 'https://i.pinimg.com/564x/98/a4/ba/98a4ba922d38242257c9f12d21efc6c9.jpg',
+    quantity: 30,
+    category: 'Electronics & Accessories', 
+    tags: ['phone', 'charger', 'cable protector'],
+    variations: [
+      { name: 'Color', value: ['Purple', 'Pink', 'Yellow', 'Green', 'Blue', 'Orange'] }
+    ]
+  },
+  {
     name: 'Chew Toy',
     shop_id: 7,
     description: 'Chew Toy Remove Bad Breath Cleaning Dog Tooth Toy For Small Puppy',
@@ -519,7 +520,7 @@ end
   shop_id: 9,
   description: 'Drinking glass set includes 4 can-shaped old fashioned glasses [ Diameter - 3 inches, Height - 5.8 inches ],4 reusable glass straws and 2 cleaning brushes',
   price: 2750,
-  image: 'https://i.pinimg.com/564x/61/fb/ca/61fbca4f2bce1f314fdcc85b187df325.jpg',    
+  image: 'https://i.pinimg.com/564x/69/48/4a/69484a10d37a90d41d929892558a6fbe.jpg',    
   quantity: 30,
   category: 'Home & Office', 
   tags: ['home', 'decor', 'kitchen'],
@@ -693,7 +694,7 @@ end
   shop_id: 14,
   description: 'Japanese Retro Alphabet Stars Crew Sweater Pullover High Street Oversize Loose Autumn Sweater',
   price: 800,
-  image: 'https://i.pinimg.com/564x/83/af/be/83afbefdb9beae8a3515a656fcc6ea39.jpg',
+  image: 'https://i.pinimg.com/474x/4b/2f/9a/4b2f9a9ae98a0b6a13049fda7a868664.jpg',
   quantity: 48,
   category: "Men's Fashion", 
   tags: ['men', 'sweater', 'sweatshirt'],
