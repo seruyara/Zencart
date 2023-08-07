@@ -18,7 +18,10 @@ Rails.application.routes.draw do
   post '/sellers', to: 'sellers#create'
   delete '/sellers', to: 'sellers#destroy'
 
-  resources :categories, only: [:show, :index, :update, :destroy]
+  # resources :categories do
+  #   resources :products, only: [:index]
+  # end
+  
   resources :variations, only: [:show, :index, :update, :destroy]
 
   # Additional routes for search and filter actions
