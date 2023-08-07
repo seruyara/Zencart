@@ -12,6 +12,12 @@ class ProductsController < ApplicationController
     render json: product
   end
 
+  # # GET /categories/:category_id/products
+  # def index
+  #   category = Category.find(params[:category_id])
+  #   products = category.products
+  #   render json: products
+  # end
 
   # GET /products/:id
   def show_by_id

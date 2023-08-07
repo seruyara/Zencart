@@ -218,7 +218,7 @@ end
         price: 2500,
         image: 'https://i.pinimg.com/474x/ab/68/1d/ab681de3be239553cd7ea3d411b57f82.jpg',
         quantity: 32,
-        category: 7, 
+        category_id: 7, 
         tags: ['airpods', 'apple'],
         variations: [
           { name: 'Color', value: 'White' }
@@ -231,7 +231,7 @@ end
         price: 4500,
         image: 'https://i.pinimg.com/474x/85/87/d4/8587d4a5d360a17fb7c6359d9383c9f2.jpg',
         quantity: 23,
-        category: 'Electronics & Accessories', 
+        category_id: 7, 
         tags: ['phone', 'case'],
         variations: [
           { name: 'Size', value: 'Standard' }
@@ -245,7 +245,7 @@ end
     price: 2000,
     image: 'https://i.pinimg.com/564x/9a/a1/fa/9aa1fa39a48581d8a8c0dedd8c2e6d0d.jpg',  
     quantity: 13,
-    category: 'Beauty, Health & Hair', 
+    category_id: 6, 
     tags: ['hair', 'wig'],
     variations: [
       { name: 'Color', value: 'Black' },
@@ -259,7 +259,7 @@ end
     price: 850,
     image: 'https://i.pinimg.com/474x/f0/1f/53/f01f53e7833abff1f12b69d2aeb465da.jpg',
     quantity: 34,
-    category: 'Beauty, Health & Hair', 
+    category_id: 6, 
     tags: ['hair', 'wig', 'glue'],
     variations: [
       { name: 'Size', value: '150 ml' }
@@ -271,8 +271,7 @@ end
     description: 'Therapy frizz flatiron',
     price: 2000,
     image: 'https://i.pinimg.com/474x/bc/fb/4a/bcfb4ad85cfeec0cd2a0c6dd908d0692.jpg',    
-    quantity: 18,
-    category: 'Beauty, Health & Hair', 
+    quantity: 6, 
     tags: ['hair', 'wig'],
     variations: [
       { name: 'Color', value: 'Silver' }
@@ -285,7 +284,7 @@ end
     price: 2000,
     image: 'https://i.pinimg.com/474x/f0/bf/b3/f0bfb3948f3213ce852444cb2c9a9dca.jpg',    
     quantity: 29,
-    category: 'Beauty, Health & Hair', 
+    category_id: 6, 
     tags: ['supplements', 'gummies', 'collagen'],
     variations: [
       { name: 'Gummies', value: '60' }
@@ -298,7 +297,7 @@ end
     price: 1500,
     image: 'https://i.pinimg.com/474x/53/e0/1b/53e01bc07046b884a706b4a44e72e063.jpg',    
     quantity: 37,
-    category: 'Beauty, Health & Hair', 
+    category_id: 6, 
     tags: ['supplements', 'gummies', 'probiotic'],
     variations: [
       { name: 'Gummies', value: 30 }
@@ -311,7 +310,7 @@ end
     price: 1700,
     image: 'https://i.pinimg.com/474x/2c/cd/90/2ccd9025f3c0e97f5d766bd227cdd44f.jpg',    
     quantity: 19,
-    category: 'Beauty, Health & Hair', 
+    category_id: 6,  
     tags: ['supplements', 'gummies', 'vitamin', 'diet'],
     variations: [
       { name: 'Capsules', value: 60 }
@@ -324,7 +323,7 @@ end
     price: 1650,
     image: 'https://i.pinimg.com/564x/e5/48/c8/e548c81a73327bcb4f6748729641e3da.jpg',    
     quantity: 29,
-    category: 'Beauty, Health & Hair', 
+    category_id: 6, 
     tags: ['serum', 'skin', 'vitamin c'],
     variations: [
       { name: 'Size', value: '60 ml' }
@@ -337,7 +336,7 @@ end
     price: 2300,
     image: 'https://i.pinimg.com/474x/07/91/14/079114b36278f9a900fcc991cebb8631.jpg',    
     quantity: 41,
-    category: 'Beauty, Health & Hair', 
+    category_id: 6, 
     tags: ['face', 'roller', 'skin'],
     variations: [
       { name: 'Size', value: 'Standard' }
@@ -350,7 +349,7 @@ end
     price: 600,
     image: 'https://i.pinimg.com/474x/2e/a4/d2/2ea4d2b8d726a532b83e055ef5d7bcbf.jpg',    
     quantity: 21,
-    category: 'Beauty, Health & Hair', 
+    category_id: 6, 
     tags: ['supplements', 'gummies', 'vitamin', 'diet'],
     variations: [
       { name: 'Size', value: 'Genric' },
@@ -365,7 +364,7 @@ end
     price: 3500,
     image: 'https://i.pinimg.com/736x/b8/ca/0f/b8ca0ff53ab4bc806de215c01d607c4d.jpg',    
     quantity: 25,
-    category: 'Pet & Outdoor', 
+    category_id: 5, 
     tags: ['pet', 'outside', 'play'],
     variations: [
       { name: 'Size', value: ['400 ml', '850ml'] }
@@ -378,7 +377,7 @@ end
     price: 350,
     image: 'https://i.pinimg.com/564x/cb/5a/18/cb5a1811f43b35c758c5a3409c62aae1.jpg',    
     quantity: 28,
-    category: 'Pet & Outdoor', 
+    category_id: 5, 
     tags: ['pet', 'outside', 'toy'],
     variations: [
       { name: 'Color', value: ['Orange', 'Red', 'Black'] }
@@ -391,7 +390,7 @@ end
     price: 500,
     image: 'https://i.pinimg.com/564x/98/a4/ba/98a4ba922d38242257c9f12d21efc6c9.jpg',
     quantity: 30,
-    category: 'Electronics & Accessories', 
+    category_id: 5, 
     tags: ['phone', 'charger', 'cable protector'],
     variations: [
       { name: 'Color', value: ['Purple', 'Pink', 'Yellow', 'Green', 'Blue', 'Orange'] }
@@ -404,7 +403,7 @@ end
     price: 3500,
     image: 'https://i.pinimg.com/564x/72/70/fb/7270fb20c5ca0eeff8d8d8f91cad1939.jpg',    
     quantity: 50,
-    category: 'Pet & Outdoor', 
+    category_id: 5, 
     tags: ['pet', 'outside', 'play'],
     variations: [
       { name: 'Color', value: ['Blue', 'Pink', 'Yellow'] }
@@ -417,7 +416,7 @@ end
     price: 1500,
     image: 'https://i.pinimg.com/564x/5a/74/22/5a74226753a2af0b6250a7f582830e25.jpg',    
     quantity: 42,
-    category: 'Pet & Outdoor', 
+    category_id: 5, 
     tags: ['pet', 'outside', 'play'],
     variations: [
       { name: 'Size', value: ['small', 'medium', 'large'] }
@@ -430,7 +429,7 @@ end
     price: 900,
     image: 'https://i.pinimg.com/474x/e5/c5/29/e5c52986fd3206b1a79e3e2475834a9a.jpg',    
     quantity: 37,
-    category: 'Pet & Outdoor', 
+    category_id: 5, 
     tags: ['outdoor', 'lights', 'decor'],
     variations: [
       { name: 'Size', value: 'Standard' }
@@ -443,7 +442,7 @@ end
     price: 1000,
     image: 'https://i.pinimg.com/564x/67/43/1f/67431fc201d17d5a4d0723e3d506f316.jpg',    
     quantity: 20,
-    category: 'Pet & Outdoor', 
+    category_id: 5, 
     tags: ['pottery', 'planter', 'flower'],
     variations: [
       { name: 'Size', value: ['small', 'medium', 'large'] }
@@ -456,7 +455,7 @@ end
     price: 6000,
     image: 'https://i.pinimg.com/564x/5a/74/22/5a74226753a2af0b6250a7f582830e25.jpg',    
     quantity: 28,
-    category: 'Pet & Outdoor', 
+    category_id: 5, 
     tags: ['table', 'patio', 'wooden'],
     variations: [
       { name: 'Size', value: 'Standard' }
@@ -469,7 +468,7 @@ end
     price: 3750,
     image: 'https://i.pinimg.com/564x/61/fb/ca/61fbca4f2bce1f314fdcc85b187df325.jpg',    
     quantity: 20,
-    category: 'Pet & Outdoor', 
+    category_id: 5,  
     tags: ['pet', 'outside', 'play'],
     variations: [
       { name: 'Size', value: '2 Gallon' }
@@ -483,7 +482,7 @@ end
   price: 550,
   image: 'https://i.pinimg.com/474x/fe/e4/8b/fee48bb8ed535933db041df417b5db2e.jpg',    
   quantity: 25,
-  category: 'Home & Office', 
+  category_id: 4,   
   tags: ['home', 'decor', 'trash can'],
   variations: [
     { name: 'Size', value: 'Standard' }
@@ -496,7 +495,7 @@ end
   price: 1750,
   image: 'https://i.pinimg.com/564x/0d/0c/59/0d0c599b1068b17f0ec95b6eb5707d6d.jpg',    
   quantity: 62,
-  category: 'Home & Office', 
+  category_id: 4,    
   tags: ['home', 'decor', 'play'],
   variations: [
     { name: 'Color', value: 'Light Pink' }
@@ -509,7 +508,7 @@ end
   price: 1800,
   image: 'https://i.pinimg.com/564x/ca/5c/57/ca5c577f9f52cd2144afd6af96f4d9e0.jpg',    
   quantity: 72,
-  category: 'Home & Office', 
+  category_id: 4,    
   tags: ['home', 'decor', 'blanket'],
   variations: [
     { name: 'Size', value: 'Standard' }
@@ -522,7 +521,7 @@ end
   price: 2750,
   image: 'https://i.pinimg.com/564x/69/48/4a/69484a10d37a90d41d929892558a6fbe.jpg',    
   quantity: 30,
-  category: 'Home & Office', 
+  category_id: 4,    
   tags: ['home', 'decor', 'kitchen'],
   variations: [
     { name: 'Size', value: '4 pcs' }
@@ -535,7 +534,7 @@ end
   price: 470,
   image: 'https://i.pinimg.com/564x/65/44/48/654448b47bd47c9617ce854ec180d69b.jpg',    
   quantity: 42,
-  category: 'Home & Office', 
+  category_id: 4,   
   tags: ['office', 'stationary', 'work'],
   variations: [
     { name: 'Size', value: '1 pack' }
@@ -548,7 +547,7 @@ end
   price: 250,
   image: 'https://i.pinimg.com/474x/c4/0f/61/c40f6102f5a7d095b019632a48e14610.jpg',    
   quantity: 53,
-  category: 'Home & Office', 
+  category_id: 4,   
   tags: ['office', 'trash can', 'desktop'],
   variations: [
     { name: 'Color', value: ['Blue', 'Pink', 'White', 'Purple'] }
@@ -562,7 +561,7 @@ end
   price: 950,
   image: 'https://i.pinimg.com/564x/5c/de/77/5cde777855b5dab5b1b0ce53f6ce2d2e.jpg',
   quantity: 25,
-  category: 'Kids & Toys', 
+  category_id: 3,   
   tags: ['kids', 'clothes', 'shoes'],
   variations: [
     { name: 'Color', value: ['Pink', 'White','Grey','Blue'] },
@@ -576,7 +575,7 @@ end
   price: 2950,
   image: 'https://i.pinimg.com/564x/1c/7b/53/1c7b535b108e9dcb107c68c21a4cf9e8.jpg',
   quantity: 62,
-  category: 'Kids & Toys', 
+  category_id: 3,    
   tags: ['kids', 'clothes', 'shoes'],
   variations: [
     { name: 'Size', value: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] }
@@ -589,7 +588,7 @@ end
   price: 999,
   image: 'https://i.pinimg.com/474x/14/0b/49/140b49a83a5550acbc5d3bd13107ef35.jpg',
   quantity: 8,
-  category: 'Kids & Toys', 
+  category_id: 3,    
   tags: ['kids', 'clothes', 'shoes'],
   variations: [
     { name: 'Color', value: ['Green', 'Pink', 'White'] }
@@ -603,7 +602,7 @@ end
   price: 1300,
   image: 'https://i.pinimg.com/474x/32/04/60/320460a428ebc5fcee909dd13111f970.jpg',
   quantity: 34,
-  category: 'Kids & Toys', 
+  category_id: 3,   
   tags: ['kids', 'clothes', 'shoes'],
   variations: [
     { name: 'Size', value: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] }
@@ -617,7 +616,7 @@ end
   price: 3000,
   image: 'https://i.pinimg.com/564x/67/fd/a7/67fda79dd7c356f27e695b1c2dd94609.jpg',
   quantity: 12,
-  category: 'Kids & Toys', 
+  category_id: 3,   
   tags: ['kids', 'toys', 'play'],
   variations: [
     { name: 'Size', value: 'Standard' }
@@ -629,8 +628,7 @@ end
   description: 'Imaginations can dive into storytelling with Barbie Dreamtopia Twinkle Lights Mermaid Doll featuring a magical light-up feature!',
   price: 1750,
   image: 'https://i.pinimg.com/564x/1b/91/66/1b9166c7ba8f56fe7d14ee47932ac7cc.jpg',
-  quantity: 9,
-  category: 'Kids & Toys', 
+  category_id: 3,   
   tags: ['kids', 'toys', 'play'],
   variations: [
     { name: 'Size', value: 'Standard' }
@@ -643,7 +641,7 @@ end
   price: 900,
   image: 'https://i.pinimg.com/564x/81/e5/60/81e560d52fdfe82362c5675dc3096de2.jpg',
   quantity: 29,
-  category: 'Kids & Toys', 
+  category_id: 3,   
   tags: ['kids', 'toys', 'play'],
   variations: [
     { name: 'Size', value: '2 pack' }
@@ -656,7 +654,7 @@ end
   price: 1950,
   image: 'https://i.pinimg.com/564x/ff/fa/26/fffa269226b5c52707609983ec7e7d4c.jpg',
   quantity: 32,
-  category: 'Kids & Toys', 
+  category_id: 3,    
   tags: ['kids', 'toys', 'play'],
   variations: [
     { name: 'Size', value: 'Standard' }
@@ -670,7 +668,7 @@ end
   price: 2200,
   image: 'https://i.pinimg.com/564x/b2/6a/74/b26a74eb0dd52bc7c5c9c35f565d5bad.jpg',
   quantity: 61,
-  category: "Men's Fashion", 
+  category_id: 2, 
   tags: ['men', 'shoes'],
   variations: [
     { name: 'Size', value: [5, 6, 7, 8, 9] }
@@ -683,7 +681,7 @@ end
   price: 1950,
   image: 'https://i.pinimg.com/564x/83/af/be/83afbefdb9beae8a3515a656fcc6ea39.jpg',
   quantity: 72,
-  category: "Men's Fashion", 
+  category_id: 2, 
   tags: ['men', 'shoes'],
   variations: [
     { name: 'Size', value: [8, 9, 10, 11, 12] }
@@ -696,7 +694,7 @@ end
   price: 800,
   image: 'https://i.pinimg.com/474x/4b/2f/9a/4b2f9a9ae98a0b6a13049fda7a868664.jpg',
   quantity: 48,
-  category: "Men's Fashion", 
+  category_id: 2, 
   tags: ['men', 'sweater', 'sweatshirt'],
   variations: [
     { name: 'Size', value: 'L' }
@@ -709,7 +707,7 @@ end
   price: 2400,
   image: 'https://i.pinimg.com/564x/83/af/be/83afbefdb9beae8a3515a656fcc6ea39.jpg',
   quantity: 13,
-  category: "Men's Fashion", 
+  category_id: 2,  
   tags: ['men', 'pants', 'cargo'],
   variations: [
     { name: 'Size', value:[ 'M','L','XL'] },
@@ -723,7 +721,7 @@ end
   price: 900,
   image: 'https://i.pinimg.com/736x/fd/31/63/fd3163f11856b3446db13a666e18ce63.jpg',
   quantity: 81,
-  category: "Men's Fashion", 
+  category_id: 2, 
   tags: ['men', 'pants', 'sweatpants'],
   variations: [
     { name: 'Size', values: ['M', 'L', 'XL', 'XXL'] },
@@ -739,7 +737,7 @@ end
   price: 1000,
   image: 'https://i.pinimg.com/564x/e0/dc/ff/e0dcff3d2b8011a6021970cc363f415b.jpg',
   quantity: 31,
-  category: "Women's Fashion", 
+  category_id: 1,  
   tags: ['women', 'dress', 'summer'],
   variations: [
     { name: 'Size', values: ['S', 'M', 'L', 'XL', 'XXL'] },
@@ -754,7 +752,7 @@ end
   price: 9000,
   image: 'https://i.pinimg.com/564x/13/77/8a/13778ac18355f0887cfc22ac586f6ab8.jpg',
   quantity: 60,
-  category: "Women's Fashion", 
+  category_id: 1,  
   tags: ['women', 'handbag', 'minimal'],
   variations: [
     { name: 'Size', value: 'Standard'},
@@ -768,7 +766,7 @@ end
   price: 1100,
   image: 'https://i.pinimg.com/474x/1c/ed/91/1ced91316eb57c7782c9dbbc8f379c1d.jpg',
   quantity: 25,
-  category: "Women's Fashion", 
+  category_id: 1,   
   tags: ['women', 'pants', 'pencil'],
   variations: [
     { name: 'Size', value: [ 'S','M','L','XL', 'XXL']},
@@ -782,7 +780,7 @@ end
   price: 3000,
   image: 'https://i.pinimg.com/564x/7f/cd/74/7fcd74be79cbe9fb61669fa47445f680.jpg',
   quantity: 51,
-  category: "Women's Fashion", 
+  category_id: 1,   
   tags: ['women', 'boots', 'ugg'],
   variations: [
     { name: 'Size', value: [ 5, 6, 7, 8, 9]},
