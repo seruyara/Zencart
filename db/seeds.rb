@@ -272,6 +272,7 @@ end
     price: 2000,
     image: 'https://i.pinimg.com/474x/bc/fb/4a/bcfb4ad85cfeec0cd2a0c6dd908d0692.jpg',    
     quantity: 6, 
+    category_id: 7, 
     tags: ['hair', 'wig'],
     variations: [
       { name: 'Color', value: 'Silver' }

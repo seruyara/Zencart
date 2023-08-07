@@ -3,7 +3,7 @@ class CreateVariations < ActiveRecord::Migration[7.0]
     create_table :variations do |t|
       t.string :name
       t.string :value
-      t.references :product, null: false, foreign_key: true
+      t.integer :product_id
 
       t.timestamps
     end
