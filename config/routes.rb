@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   resources :carts, only: [:show, :index, :update, :destroy]
   resources :orders, only: [:show, :index, :update, :destroy]
   resources :products, only: [:show, :index, :update, :destroy]
-  get '/products/:id', to: 'products#show_by_id', as: 'product_by_id'
   resources :shops, only: [:show, :index, :update, :destroy]
   resources :customers, only: [:show, :index, :create, :update, :destroy]
   resources :sellers, only: [:show, :index, :create,  :update, :destroy]
@@ -18,10 +17,8 @@ Rails.application.routes.draw do
   post '/sellers', to: 'sellers#create'
   delete '/sellers', to: 'sellers#destroy'
 
-  # resources :categories do
-  #   resources :products, only: [:index]
-  # end
-  
+
+  resources :categories, only: [:show, :index, :update, :destroy]
   resources :variations, only: [:show, :index, :update, :destroy]
 
   # Additional routes for search and filter actions
