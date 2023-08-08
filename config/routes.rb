@@ -21,6 +21,14 @@ Rails.application.routes.draw do
   resources :categories, only: [:show, :index, :update, :destroy]
   resources :variations, only: [:show, :index, :update, :destroy]
 
+  # seller login route
+  post "/seller/login", to: "sellersessions#create"
+  delete "/seller/logout", to: "sellersessions#destroy"
+
+  # user login route
+  post "/customer/login", to: "customersessions#create"
+  delete "/customer/logout", to: "customersessions#destroy"
+
   # Additional routes for search and filter actions
   get '/products/search', to: 'products#search'
   get '/products/filter', to: 'products#filter'
