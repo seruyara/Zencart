@@ -1,56 +1,50 @@
 class CustomersController < ApplicationController
-  before_action :authorize, only: [:show]
-  before_action :set_customer, only: [:show, :update, :destroy]
+  skip_before_action :authorized, only: [:index, :create, :show, :update, :destroy]
 
-  def create
-    customer = Customer.create(customer_params)
-    #debugger
-    if customer.valid?
-      token = customer.generate_authentication_token!
-      # debugger
-      render json: {'data':customer, 'token':token}, status: :created
-    else
-      render json: { error: customer.errors.full_messages }, status: :unprocessable_entity
-    end
-  end
-
-  def show
-
-    customer = Customer.find_by(authentication_token: request.headers['Authorization'])
-
-    if customer
-      render json: customer
-    else
-      render json: { error: 'Invalid authentication token' }, status: :unauthorized
-    end
-  end
+  rescue_from ActiveRecord::RecordInvalid, with: :render_upnrocessable_entity_response
 
   def index
     customers = Customer.all
     render json: customers
   end
 
-  def destroy
-    if customer.destroy
-      head :no_content
+  def show
+    customer = Customer.find(params[:id])
+    if customer
+      render json: customer
     else
-      render json: { error: "Failed to delete customer" }, status: :unprocessable_entity
+      render json: { error: "Customer not found" }, status: :not_found
     end
+  end
+
+  def create
+    customer = Customer.create!(customer_params)
+    if customer.valid?
+      render json: customer, status: :created
+    else
+      render json: { error: "customer not created" }, status: :unprocessable_entity
+    end
+  end
+
+  def update
+    customer = Customer.find(params[:id])
+    customer.update!(customer_params)
+    render json: customer
+  end
+
+  def destroy
+    customer = Customer.find(params[:id])
+    customer.destroy
+    head :no_content
   end
 
   private
 
-  def set_customer
-    customer = Customer.find(params[:id])
-  rescue ActiveRecord::RecordNotFound
-    render json: { error: "Customer not found" }, status: :not_found
-  end
-
   def customer_params
-    params.require(:customer).permit(:name, :email, :password, :password_confirmation )
+    params.permit(:name, :email, :password)
   end
 
-  def authorize
-    return render json: { error: 'Unauthorized' }, status: :unauthorized unless request.headers['Authorization']
+  def render_upnrocessable_entity_response(invalid)
+    render json: { errors: invalid.record.errors.full_messages }, status: :unprocessable_entity
   end
 end
