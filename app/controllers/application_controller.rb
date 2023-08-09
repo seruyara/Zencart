@@ -3,7 +3,8 @@
 class ApplicationController < ActionController::API
 
     # Use Puma as the app server
-    before_action :authorized # this will run the authorized method before every single request we make to our API
+    # before_action :authorized
+     # this will run the authorized method before every single request we make to our API
     #3 - we are going to create a method called encode_token that will take in a payload and encode it using the JWT.encode method
   
     def encode_token(payload)
@@ -52,9 +53,9 @@ class ApplicationController < ActionController::API
       !!current_customer || !!current_seller
     end
   
-    def authorized
-      render json: { message: "Please log in" }, status: :unauthorized unless logged_in?
-    end
+    # def authorized
+    #   render json: { message: "Please log in" }, status: :unauthorized unless logged_in?
+    # end
   
     def authorized_customer
       render json: { message: "You are not authorized to perform this action as a user" }, status: :unauthorized unless logged_in? && !!current_user
