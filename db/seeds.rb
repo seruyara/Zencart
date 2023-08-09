@@ -725,8 +725,8 @@ end
   category_id: 2, 
   tags: ['men', 'pants', 'sweatpants'],
   variations: [
-    { name: 'Size', values: ['M', 'L', 'XL', 'XXL'] },
-    { name: 'Color', values: ['Dark Grey'] } 
+    { name: 'Size', value: ['M', 'L', 'XL', 'XXL'] },
+    { name: 'Color', value: ['Dark Grey'] } 
   ]
 },
 
@@ -741,8 +741,8 @@ end
   category_id: 1,  
   tags: ['women', 'dress', 'summer'],
   variations: [
-    { name: 'Size', values: ['S', 'M', 'L', 'XL', 'XXL'] },
-    { name: 'Color', values: ['Yellow'] }
+    { name: 'Size', value: ['S', 'M', 'L', 'XL', 'XXL'] },
+    { name: 'Color', value: ['Yellow'] }
   ]
 },
 
@@ -820,7 +820,7 @@ product_data.each do |product_attrs|
   if images.present?
     # Assuming you have an attribute `image` for the `Product` model to store the image
     product.image.attach(io: URI.open(images), filename: 'product_image.jpg', content_type: 'image/jpeg')
-  end
+  end 
 end
 
 
