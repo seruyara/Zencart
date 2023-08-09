@@ -454,7 +454,7 @@ end
     shop_id: 8,
     description: 'Wooden Square Foldable Table',
     price: 6000,
-    image: 'https://i.pinimg.com/564x/5a/74/22/5a74226753a2af0b6250a7f582830e25.jpg',    
+    image: 'https://i.pinimg.com/474x/0e/d1/ca/0ed1ca0676e8b7fe5fea22e1502d7926.jpg',    
     quantity: 28,
     category_id: 5, 
     tags: ['table', 'patio', 'wooden'],
@@ -629,6 +629,7 @@ end
   description: 'Imaginations can dive into storytelling with Barbie Dreamtopia Twinkle Lights Mermaid Doll featuring a magical light-up feature!',
   price: 1750,
   image: 'https://i.pinimg.com/564x/1b/91/66/1b9166c7ba8f56fe7d14ee47932ac7cc.jpg',
+  quantity: 15,
   category_id: 3,   
   tags: ['kids', 'toys', 'play'],
   variations: [
@@ -706,7 +707,7 @@ end
   shop_id: 14,
   description: "Men's work pants made with CORDURA® fabric for uninhibited movement and unmatched durability.",
   price: 2400,
-  image: 'https://i.pinimg.com/564x/83/af/be/83afbefdb9beae8a3515a656fcc6ea39.jpg',
+  image: 'https://i.pinimg.com/564x/b1/4c/67/b14c6700c6968e6bf09263d60e5c1f75.jpg',
   quantity: 13,
   category_id: 2,  
   tags: ['men', 'pants', 'cargo'],
@@ -858,3 +859,6 @@ end
 
 
   puts "Seeded successfully."
+
+
+  
