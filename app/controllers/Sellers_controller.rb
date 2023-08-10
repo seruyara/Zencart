@@ -41,7 +41,7 @@ class SellersController < ApplicationController
   private
 
   def seller_params
-    params.permit(:name, :email, :password)
+    params.permit(:name, :email, :password, :shop_name )
   end
 
   def render_upnrocessable_entity_response(invalid)
