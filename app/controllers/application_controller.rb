@@ -57,9 +57,9 @@ class ApplicationController < ActionController::API
       !!current_customer || !!current_seller
     end
   
-    def authorized
-      render json: { message: "Please log in" }, status: :unauthorized unless logged_in?
-    end
+    # def authorized
+    #   render json: { message: "Please log in" }, status: :unauthorized unless logged_in?
+    # end
   
     def authorized_customer
       render json: { message: "You are not authorized to perform this action as a user" }, status: :unauthorized unless logged_in? && !!current_user
