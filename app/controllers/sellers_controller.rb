@@ -1,54 +1,50 @@
 class SellersController < ApplicationController
-  before_action :authorize, only: [:show]
+  skip_before_action :authorized, only: [:index, :create, :show, :update, :destroy]
 
-  def create
-    seller = Seller.create(seller_params)
-    #debugger
-    if seller.valid?
-      token = seller.generate_authentication_token!
-      # debugger
-      render json: {'data':seller, 'token':token}, status: :created
-    else
-      render json: { error: seller.errors.full_messages }, status: :unprocessable_entity
-    end
-  end
-
-  def show
-
-    seller = Seller.find_by(authentication_token: request.headers['Authorization'])
-
-    if seller
-      render json: sellerer
-    else
-      render json: { error: 'Invalid authentication token' }, status: :unauthorized
-    end
-  end
+  rescue_from ActiveRecord::RecordInvalid, with: :render_upnrocessable_entity_response
 
   def index
     sellers = Seller.all
     render json: sellers
   end
 
-  def destroy
-    if set_seller.destroy
-      head :no_content
+  def show
+    seller = Seller.find(params[:id])
+    if seller
+      render json: seller
     else
-      render json: { error: "Failed to delete seller" }, status: :unprocessable_entity
+      render json: { error: "Seller not found" }, status: :not_found
     end
   end
+
+  def create
+    seller = Seller.create!(seller_params)
+    if seller.valid?
+      render json: seller, status: :created
+    else
+      render json: { error: "Seller not created" }, status: :unprocessable_entity
+    end
+  end
+
+  def update
+    seller = Seller.find(params[:id])
+    seller.update!(seller_params)
+    render json: seller
+  end
+
+  def destroy
+    seller = Seller.find(params[:id])
+    seller.destroy
+    head :no_content
+  end
+
   private
 
-  def set_seller
-    seller = Seller.find(params[:id])
-  rescue ActiveRecord::RecordNotFound
-    render json: { error: "Seller not found" }, status: :not_found
-  end
-
   def seller_params
-    params.require(:seller).permit(:name, :email, :password, :password_confirmation)
+    params.permit(:name, :email, :password, :shop_name )
   end
 
-  def authorize
-    return render json: { error: 'Unauthorized' }, status: :unauthorized unless request.headers['Authorization']
+  def render_upnrocessable_entity_response(invalid)
+    render json: { errors: invalid.record.errors.full_messages }, status: :unprocessable_entity
   end
 end

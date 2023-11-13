@@ -61,10 +61,10 @@ class ProductsController < ApplicationController
   def search
     if params[:search_query].present? || params[:tags].present? || params[:category].present?
       search_results = Product.where("name LIKE ? OR tags LIKE ? OR description LIKE ? OR category LIKE ?",
-                                      "%#{params[:search_query]}%", #Search keyword in name 
-                                      "%#{params[:tags]}%", # Search tag
-                                      "%#{params[:search_query]}%", # Search keyword in description
-                                      "%#{params[:category]}%")     # Search keyword in category
+        "%#{params[:search_query]}%", #Search keyword in name 
+        "%#{params[:tags]}%", # Search tag
+        "%#{params[:search_query]}%", # Search keyword in description
+        "%#{params[:category]}%")     # Search keyword in category
     else
       search_results = Product.all
     end
